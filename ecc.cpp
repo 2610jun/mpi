@@ -241,7 +241,7 @@ void run_SC_parallel(int world_rank, int world_size, int N, int K, int EBN0_BEGI
     // 파일 경로 및 이름 지정
      if(world_rank == 0){     
      string folder = "result/SC/";
-     string filename = decoder_name + " (" + to_string(N) + ", " + to_string(K) + ").txt";
+     string filename = decoder_name + "_" + to_string(N) + "_" + to_string(K) + ".txt";
      string filepath = folder + filename;
 
      ofstream fout(filepath);
@@ -302,7 +302,7 @@ void run_CA_SCL_parallel(int world_rank, int world_size, int N, int K, int NUM_L
     
     
     vector<double> EbN0_dB = linspace(EBN0_BEGIN,EBN0_END,linspace_num_point); // 7 point in 0dB~3dB
-    string decoder_name = "CA-SCL";
+    string decoder_name = "CA_SCL";
 
     vector<double> EbN0;
     vector<double> sigma;
@@ -460,7 +460,7 @@ void run_CA_SCL_parallel(int world_rank, int world_size, int N, int K, int NUM_L
     // 파일 경로 및 이름 지정
     if(world_rank == 0){
     string folder = "result/CA_SCL/";
-    string filename = decoder_name + " (" + to_string(N) + ", " + to_string(K) + ", "+ to_string(NUM_LIST) + ", " + to_string(crc_len) + ").txt";
+    string filename = decoder_name + "_" + to_string(N) + "_" + to_string(K) + "_"+ to_string(NUM_LIST) + "_" + to_string(crc_len) + ".txt";
     string filepath = folder + filename;
 
     ofstream fout(filepath);

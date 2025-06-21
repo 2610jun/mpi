@@ -917,6 +917,8 @@ vector<bool> crc_polynomial(const string crc_type){
         return{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 };
     else if (!crc_type.compare("11"))
         return{ 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1 };
+    else if (!crc_type.compare("7"))
+        return { 1, 0, 1, 0, 0, 1, 1, 0};
     else if (!crc_type.compare("6"))
         return{ 1, 1, 0, 0, 0, 0, 1 };
     else if (!crc_type.compare("3"))
